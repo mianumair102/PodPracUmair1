@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentObjectUmair: NSObject {
+public class StudentObjectUmair: NSObject {
     var name = ""
     var gender = ""
     override init() {
