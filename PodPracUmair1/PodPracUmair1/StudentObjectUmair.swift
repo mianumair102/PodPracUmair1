@@ -11,12 +11,12 @@ import UIKit
 public class StudentObjectUmair: NSObject {
     var name = ""
     var gender = ""
-    override init() {
+    public override init() {
         self.name = "No Name"
         self.gender = "No Preference"
     }
     
-    init(name:String , gender:String) {
+    public init(name:String , gender:String) {
         self.name = name
         self.gender = gender
     }
