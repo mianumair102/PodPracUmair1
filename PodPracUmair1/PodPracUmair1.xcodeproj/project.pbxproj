@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E7578D8209B148200BCD968 /* PodPracUmair1.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7578D6209B148200BCD968 /* PodPracUmair1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E7578DF209B162500BCD968 /* StudentObjectUmair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */; };
 		957090BA9E442541D74DDB14 /* Pods_PodPracUmair1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */; };
 /* End PBXBuildFile section */
 
@@ -15,6 +16,7 @@
 		3E7578D3209B148200BCD968 /* PodPracUmair1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PodPracUmair1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7578D6209B148200BCD968 /* PodPracUmair1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodPracUmair1.h; sourceTree = "<group>"; };
 		3E7578D7209B148200BCD968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentObjectUmair.swift; sourceTree = "<group>"; };
 		9DC68D6FC923CAE52C5CCB5D /* Pods-PodPracUmair1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodPracUmair1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5432FF9766D3DEA26940B2B /* Pods-PodPracUmair1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				3E7578D6209B148200BCD968 /* PodPracUmair1.h */,
 				3E7578D7209B148200BCD968 /* Info.plist */,
+				3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */,
 			);
 			path = PodPracUmair1;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 				TargetAttributes = {
 					3E7578D2209B148200BCD968 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -176,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7578DF209B162500BCD968 /* StudentObjectUmair.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DC68D6FC923CAE52C5CCB5D /* Pods-PodPracUmair1.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -316,10 +322,15 @@
 				INFOPLIST_FILE = PodPracUmair1/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rozee.PodPracUmair1;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5432FF9766D3DEA26940B2B /* Pods-PodPracUmair1.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -339,7 +351,11 @@
 				INFOPLIST_FILE = PodPracUmair1/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rozee.PodPracUmair1;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
