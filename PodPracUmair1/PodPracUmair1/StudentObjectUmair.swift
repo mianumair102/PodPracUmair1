@@ -20,4 +20,10 @@ public class StudentObjectUmair: NSObject {
         self.name = name
         self.gender = gender
     }
+    
+    public func printMySelf(){
+        print("-    -   -   -   -    -")
+        print("Name: \(self.name)")
+        print("Gender: \(self.gender)")
+    }
 }

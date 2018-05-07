@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E7578D8209B148200BCD968 /* PodPracUmair1.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7578D6209B148200BCD968 /* PodPracUmair1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E7578DF209B162500BCD968 /* StudentObjectUmair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */; };
+		3EAD3E1620A0279900FDBE1A /* SampleTempUmair.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EAD3E1420A0279900FDBE1A /* SampleTempUmair.xcdatamodeld */; };
 		957090BA9E442541D74DDB14 /* Pods_PodPracUmair1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +18,7 @@
 		3E7578D6209B148200BCD968 /* PodPracUmair1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodPracUmair1.h; sourceTree = "<group>"; };
 		3E7578D7209B148200BCD968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentObjectUmair.swift; sourceTree = "<group>"; };
+		3EAD3E1520A0279900FDBE1A /* SampleTempUmair.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleTempUmair.xcdatamodel; sourceTree = "<group>"; };
 		9DC68D6FC923CAE52C5CCB5D /* Pods-PodPracUmair1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodPracUmair1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5432FF9766D3DEA26940B2B /* Pods-PodPracUmair1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				3E7578D6209B148200BCD968 /* PodPracUmair1.h */,
 				3E7578D7209B148200BCD968 /* Info.plist */,
 				3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */,
+				3EAD3E1420A0279900FDBE1A /* SampleTempUmair.xcdatamodeld */,
 			);
 			path = PodPracUmair1;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAD3E1620A0279900FDBE1A /* SampleTempUmair.xcdatamodeld in Sources */,
 				3E7578DF209B162500BCD968 /* StudentObjectUmair.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +390,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3EAD3E1420A0279900FDBE1A /* SampleTempUmair.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3EAD3E1520A0279900FDBE1A /* SampleTempUmair.xcdatamodel */,
+			);
+			currentVersion = 3EAD3E1520A0279900FDBE1A /* SampleTempUmair.xcdatamodel */;
+			path = SampleTempUmair.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3E7578CA209B148200BCD968 /* Project object */;
 }
