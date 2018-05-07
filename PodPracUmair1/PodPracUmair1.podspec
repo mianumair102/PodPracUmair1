@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/mianumair102/PodPracUmair1.git", :tag => "0.0.4" }
 
   s.source_files  = "PodPracUmair1/**/*.{h,m,swift}"
-  s.resource_bundles = {'PodPracUmair1' => ['PodPracUmair1/*.xcdatamodeld']}
+  s.resource_bundles = {'PodPracUmair1' => ['PodPracUmair1/PodPracUmair1/*.xcdatamodeld']}
   # s.exclude_files = "Classes/Exclude"
 
 end
