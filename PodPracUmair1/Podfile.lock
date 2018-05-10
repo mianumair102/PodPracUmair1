@@ -1,3 +1,75 @@
-PODFILE CHECKSUM: a01ac087feae0610280dc3401a5457df74164c5c
+PODS:
+  - Alamofire (4.7.2)
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - INSPersistentContainer (1.0.2)
+  - JKVValue (1.3.3)
+  - libwebp (0.6.1):
+    - libwebp/core (= 0.6.1)
+    - libwebp/dec (= 0.6.1)
+    - libwebp/demux (= 0.6.1)
+    - libwebp/dsp (= 0.6.1)
+    - libwebp/enc (= 0.6.1)
+    - libwebp/mux (= 0.6.1)
+    - libwebp/utils (= 0.6.1)
+    - libwebp/webp (= 0.6.1)
+  - libwebp/core (0.6.1):
+    - libwebp/webp
+  - libwebp/dec (0.6.1):
+    - libwebp/core
+  - libwebp/demux (0.6.1):
+    - libwebp/core
+  - libwebp/dsp (0.6.1):
+    - libwebp/core
+  - libwebp/enc (0.6.1):
+    - libwebp/core
+  - libwebp/mux (0.6.1):
+    - libwebp/core
+  - libwebp/utils (0.6.1):
+    - libwebp/core
+  - libwebp/webp (0.6.1)
+  - RMQClient (0.10.0):
+    - CocoaAsyncSocket (~> 7.4.0)
+    - JKVValue
+  - SDWebImage/Core (4.3.3)
+  - SDWebImage/WebP (4.3.3):
+    - libwebp (~> 0.5)
+    - SDWebImage/Core
+  - SwiftHEXColors (1.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - INSPersistentContainer
+  - RMQClient
+  - SDWebImage/WebP
+  - SwiftHEXColors
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CocoaAsyncSocket
+    - INSPersistentContainer
+    - JKVValue
+    - libwebp
+    - RMQClient
+    - SDWebImage
+    - SwiftHEXColors
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  INSPersistentContainer: 7e04a0d332ba075441ce0ee73d584ce84d76ac23
+  JKVValue: d7941071b1cf9ba35c194fd40bcf4c4d9b5462e9
+  libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
+  RMQClient: e9bfea2d08f151b6b12df82ad115c78bd8de2106
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SwiftHEXColors: 9681e756dc78a99ae97f277165b3f5e33b087553
+
+PODFILE CHECKSUM: cdc224bc329738043e6dab2698a4a591918459b2
 
 COCOAPODS: 1.5.0

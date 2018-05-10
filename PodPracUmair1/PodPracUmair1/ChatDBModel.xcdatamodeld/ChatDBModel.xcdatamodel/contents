@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ChatHistory" representedClassName="ChatHistory" syncable="YES" codeGenerationType="class">
+        <attribute name="exchange" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idd" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image64" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recieverId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ChatThreads" representedClassName="ChatThreads" syncable="YES" codeGenerationType="class">
+        <attribute name="exchange" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idd" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastmessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMsgTime" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="senderImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senderName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Members" representedClassName="Members" syncable="YES" codeGenerationType="class">
+        <attribute name="exchange" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idd" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senderImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ChatHistory" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="ChatThreads" positionX="-54" positionY="-9" width="128" height="135"/>
+        <element name="Members" positionX="-36" positionY="9" width="128" height="135"/>
+    </elements>
+</model>

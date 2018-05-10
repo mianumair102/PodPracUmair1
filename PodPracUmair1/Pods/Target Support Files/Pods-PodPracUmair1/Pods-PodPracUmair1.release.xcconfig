@@ -1,6 +1,11 @@
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket" "${PODS_CONFIGURATION_BUILD_DIR}/INSPersistentContainer" "${PODS_CONFIGURATION_BUILD_DIR}/JKVValue" "${PODS_CONFIGURATION_BUILD_DIR}/RMQClient" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftHEXColors" "${PODS_CONFIGURATION_BUILD_DIR}/libwebp"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 $(inherited) SD_WEBP=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/INSPersistentContainer/INSPersistentContainer.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/JKVValue/JKVValue.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RMQClient/RMQClient.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftHEXColors/SwiftHEXColors.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/libwebp/libwebp.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "CocoaAsyncSocket" -framework "INSPersistentContainer" -framework "JKVValue" -framework "RMQClient" -framework "SDWebImage" -framework "SwiftHEXColors" -framework "libwebp"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
+USER_HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/libwebp/src
