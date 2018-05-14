@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,6 +50,7 @@
 		3EFBB32220A41C3800B4A5A4 /* ChatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB31C20A41C3800B4A5A4 /* ChatSDK.swift */; };
 		3EFBB32320A41C3800B4A5A4 /* SingletonClassOfObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB31D20A41C3800B4A5A4 /* SingletonClassOfObjects.swift */; };
 		3EFBB32620A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB32420A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld */; };
+		3EFBB32820A4217300B4A5A4 /* StartChatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB32720A4217300B4A5A4 /* StartChatSDK.swift */; };
 		957090BA9E442541D74DDB14 /* Pods_PodPracUmair1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		3EFBB31C20A41C3800B4A5A4 /* ChatSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSDK.swift; sourceTree = "<group>"; };
 		3EFBB31D20A41C3800B4A5A4 /* SingletonClassOfObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonClassOfObjects.swift; sourceTree = "<group>"; };
 		3EFBB32520A41CC500B4A5A4 /* ChatDBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatDBModel.xcdatamodel; sourceTree = "<group>"; };
+		3EFBB32720A4217300B4A5A4 /* StartChatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatSDK.swift; sourceTree = "<group>"; };
 		9DC68D6FC923CAE52C5CCB5D /* Pods-PodPracUmair1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodPracUmair1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5432FF9766D3DEA26940B2B /* Pods-PodPracUmair1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */,
 				3E8948D520A166D500C5EE69 /* TempSample.xcdatamodeld */,
 				3EFBB32420A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld */,
+				3EFBB32720A4217300B4A5A4 /* StartChatSDK.swift */,
 			);
 			path = PodPracUmair1;
 			sourceTree = "<group>";
@@ -304,11 +307,12 @@
 					3E7578D2209B148200BCD968 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 3E7578CD209B148200BCD968 /* Build configuration list for PBXProject "PodPracUmair1" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -376,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFBB2F420A41C2600B4A5A4 /* ChatHistoryObject.swift in Sources */,
+				3EFBB32820A4217300B4A5A4 /* StartChatSDK.swift in Sources */,
 				3EFBB2E920A41C0C00B4A5A4 /* AttendeesListViewController.swift in Sources */,
 				3E8948D720A166D500C5EE69 /* TempSample.xcdatamodeld in Sources */,
 				3EFBB32120A41C3800B4A5A4 /* ActivityViewController.swift in Sources */,
@@ -519,8 +524,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -542,11 +546,7 @@
 				INFOPLIST_FILE = PodPracUmair1/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rozee.PodPracUmair1;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -571,11 +571,7 @@
 				INFOPLIST_FILE = PodPracUmair1/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rozee.PodPracUmair1;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

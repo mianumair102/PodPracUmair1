@@ -25,5 +25,7 @@ public class StudentObjectUmair: NSObject {
         print("-    -   -   -   -    -")
         print("Name: \(self.name)")
         print("Gender: \(self.gender)")
+        
+        let obj = ChatHistory()
     }
 }
