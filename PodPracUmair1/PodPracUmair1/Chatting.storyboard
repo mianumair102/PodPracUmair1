@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -14,7 +15,7 @@
         <!--View Controller-->
         <scene sceneID="FOf-Eu-rHJ">
             <objects>
-                <viewController id="acS-MW-kmT" customClass="ViewController" customModule="ChattingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="acS-MW-kmT" customClass="ViewController" customModule="PodPracUmair1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Stg-RZ-SfB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,12 +43,12 @@
         <!--Chatting View Controller-->
         <scene sceneID="3S1-fS-lys">
             <objects>
-                <viewController storyboardIdentifier="ChattingViewController" id="Sux-GK-gEV" customClass="ChattingViewController" customModule="ChattingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChattingViewController" id="Sux-GK-gEV" customClass="ChattingViewController" customModule="PodPracUmair1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDn-o8-8gf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOn-U6-7OE" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOn-U6-7OE" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UZ-eE-8f8">
@@ -67,7 +68,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbk-pb-3L0" customClass="RozeeUIButton" customModule="ChattingApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbk-pb-3L0" customClass="RozeeUIButton" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="48" y="13" width="40" height="40"/>
                                         <color key="backgroundColor" red="0.72868343229999999" green="0.77971928960000003" blue="0.82932747340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -141,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="50" width="319.5" height="386"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatMessageTableCell" rowHeight="73" id="43b-fZ-c6S" customClass="ChatMessageTableCell" customModule="ChattingApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatMessageTableCell" rowHeight="73" id="43b-fZ-c6S" customClass="ChatMessageTableCell" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="319.5" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="43b-fZ-c6S" id="Tep-k2-6iD">
@@ -159,7 +160,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-78-Bbg" customClass="RozeeUIButton" customModule="ChattingApp" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dh-78-Bbg" customClass="RozeeUIButton" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="33" width="36" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <color key="backgroundColor" red="0.72868343229999999" green="0.77971928960000003" blue="0.82932747340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,7 +178,7 @@
                                                     <rect key="frame" x="39" y="46" width="17" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXz-N0-apQ" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXz-N0-apQ" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="55" y="17" width="204" height="52"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label, Label, Label, Label, Label, Label, Label," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-1b-KKR">
@@ -229,7 +230,7 @@
                                             <outlet property="lblmessage" destination="HBo-1b-KKR" id="dbD-0p-yXr"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyMessageTableCell" rowHeight="73" id="WVs-sV-plF" customClass="MyMessageTableCell" customModule="ChattingApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyMessageTableCell" rowHeight="73" id="WVs-sV-plF" customClass="MyMessageTableCell" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="101" width="319.5" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WVs-sV-plF" id="272-lv-XIu">
@@ -240,7 +241,7 @@
                                                     <rect key="frame" x="295.5" y="46" width="17" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ob-ll-tw3" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ob-ll-tw3" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="111" y="17" width="187" height="52"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bismillah ,SubhanAllah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8u-0U-ScG">
@@ -321,7 +322,7 @@
                                             <outlet property="lblmessage" destination="k8u-0U-ScG" id="8fL-Yk-Vcd"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyImageTableCell" rowHeight="217" id="9Yg-Ji-NRJ" customClass="MyImageTableCell" customModule="ChattingApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyImageTableCell" rowHeight="217" id="9Yg-Ji-NRJ" customClass="MyImageTableCell" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="174" width="319.5" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Yg-Ji-NRJ" id="xZi-Db-8Vz">
@@ -345,10 +346,10 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-xR-mED" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWT-xR-mED" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="17" width="217" height="196"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-EL-pcR" customClass="RozeeUIImageView" customModule="ChattingApp" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-EL-pcR" customClass="RozeeUIImageView" customModule="PodPracUmair1" customModuleProvider="target">
                                                             <rect key="frame" x="4" y="4" width="209" height="188"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
@@ -411,7 +412,7 @@
                                             <outlet property="lblTopDate" destination="12o-is-Mt9" id="TBg-DZ-wP1"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SenderImageTableCell" rowHeight="204" id="04Z-5T-mHT" customClass="SenderImageTableCell" customModule="ChattingApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SenderImageTableCell" rowHeight="204" id="04Z-5T-mHT" customClass="SenderImageTableCell" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="391" width="319.5" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="04Z-5T-mHT" id="vjx-6b-jzQ">
@@ -433,10 +434,10 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdQ-7u-SvB" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdQ-7u-SvB" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="55" y="17" width="204" height="183"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Kb-bQ-bMv" customClass="RozeeUIImageView" customModule="ChattingApp" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Kb-bQ-bMv" customClass="RozeeUIImageView" customModule="PodPracUmair1" customModuleProvider="target">
                                                             <rect key="frame" x="4" y="4" width="196" height="175"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
@@ -475,7 +476,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnK-KU-DhC" customClass="RozeeUIButton" customModule="ChattingApp" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnK-KU-DhC" customClass="RozeeUIButton" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="164" width="36" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <color key="backgroundColor" red="0.72868343229999999" green="0.77971928960000003" blue="0.82932747340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -551,7 +552,7 @@
                                             <action selector="addOptionsBtnAction:" destination="Sux-GK-gEV" eventType="touchUpInside" id="C3B-yk-EYl"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJI-Ub-g5h" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJI-Ub-g5h" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="43" y="5" width="230" height="35"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
@@ -622,7 +623,7 @@
         <!--Full Image View Controller-->
         <scene sceneID="GyC-wS-Gjv">
             <objects>
-                <viewController storyboardIdentifier="FullImageViewController" id="FRS-8K-om4" customClass="FullImageViewController" customModule="ChattingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullImageViewController" id="FRS-8K-om4" customClass="FullImageViewController" customModule="PodPracUmair1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgG-pD-egr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -661,15 +662,39 @@
             </objects>
             <point key="canvasLocation" x="2263.125" y="-225"/>
         </scene>
+        <!--Tests View Controller-->
+        <scene sceneID="Lz6-LQ-KzN">
+            <objects>
+                <viewController storyboardIdentifier="TestsViewController" id="aeW-wn-5bh" customClass="TestsViewController" customModule="PodPracUmair1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hf-wE-g81">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiD-u4-VKu">
+                                <rect key="frame" x="166" y="123" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="p3O-AC-8dz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BsV-1F-nhY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3113" y="486"/>
+        </scene>
         <!--Chat Threads View Controller-->
         <scene sceneID="Och-mB-D6R">
             <objects>
-                <viewController id="PAz-qk-RSW" customClass="ChatThreadsViewController" customModule="ChattingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PAz-qk-RSW" customClass="ChatThreadsViewController" customModule="PodPracUmair1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K79-Hh-f2T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-3D-zof" customClass="RozeeUIView" customModule="ChattingApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-3D-zof" customClass="RozeeUIView" customModule="PodPracUmair1" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-I4-Hbr">
@@ -714,7 +739,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatThreadTableCell" rowHeight="70" id="ttB-eH-HHU" customClass="ChatThreadTableCell" customModule="ChattingApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatThreadTableCell" rowHeight="70" id="ttB-eH-HHU" customClass="ChatThreadTableCell" customModule="PodPracUmair1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ttB-eH-HHU" id="dh1-gF-dsX">
@@ -750,7 +775,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-Jx-bOE" customClass="RozeeUIButton" customModule="ChattingApp" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-Jx-bOE" customClass="RozeeUIButton" customModule="PodPracUmair1" customModuleProvider="target">
                                                     <rect key="frame" x="17" y="13" width="44" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.72868343229999999" green="0.77971928960000003" blue="0.82932747340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -839,7 +864,7 @@
         <!--Activity View Controller-->
         <scene sceneID="h2w-vw-koq">
             <objects>
-                <viewController storyboardIdentifier="ActivityViewController" id="49f-J1-7vz" customClass="ActivityViewController" customModule="ChattingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityViewController" id="49f-J1-7vz" customClass="ActivityViewController" customModule="PodPracUmair1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3zN-e4-a5y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,7 +10,7 @@ import CoreData
 import INSPersistentContainer
 import RMQClient
 
-class ChatDBManager: NSObject, RMQConnectionDelegate
+public class ChatDBManager: NSObject, RMQConnectionDelegate
 {
     public static let ChatDBManagerSharedInstance = ChatDBManager()
     
@@ -74,6 +74,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
             } else
             {
                 // self.setupView()
+                 print("Successful to Load Persistent Store")
                 ChatDBManager.ChatDBManagerSharedInstance.isPresistanceOfChatLoaded = true
 //                do {
 //                    try self.fetchedResultsController.performFetch()
@@ -113,7 +114,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
     
     //MARK:- My Functions
     
-    public func sendDeliveryStatus(chatObj : ChatHistoryObject) -> Void
+     func sendDeliveryStatus(chatObj : ChatHistoryObject) -> Void
    {
         var msg = ""
         var dic = Constants.jsonStandard()
@@ -164,7 +165,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
             ChatDBManager.ChatDBManagerSharedInstance.sendMessageToExchange(exchangeName: chatObj.exchange, queue: myQueue!, message: msg)
         }
     }
-    public func sendOnlineStatus(statusObj : Constants.jsonStandard!) -> Void
+     func sendOnlineStatus(statusObj : Constants.jsonStandard!) -> Void
     {
         var msg = ""
         var dic = Constants.jsonStandard()
@@ -244,7 +245,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
     }
     
     // MARK: Database Insertion
-    public func saveThreadsInDataBase(data:[ChatThreadModel]) ->Void
+     func saveThreadsInDataBase(data:[ChatThreadModel]) ->Void
     {
         for i in 0 ..< data.count
         {
@@ -280,7 +281,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
         }
     }
     
-    public func saveMembersInDataBase(data:[ChatMemberObject]) ->Void{
+     func saveMembersInDataBase(data:[ChatMemberObject]) ->Void{
         
         for i in 0 ..< data.count
         {
@@ -316,7 +317,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
         }
         
     }
-    public func saveChatMessagesInDataBase(data:[ChatHistoryObject], chatData : Constants.jsonStandard!) ->Void{
+     func saveChatMessagesInDataBase(data:[ChatHistoryObject], chatData : Constants.jsonStandard!) ->Void{
         
         DispatchQueue.global(qos: .userInitiated).async {
             // 1
@@ -381,7 +382,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
         
         
     }
-    public func saveChatMessagesInDataBaseNew(cData:ChatHistoryObject!) ->Void{
+     func saveChatMessagesInDataBaseNew(cData:ChatHistoryObject!) ->Void{
         
         DispatchQueue.global(qos: .userInitiated).async {
             // 1
@@ -2328,7 +2329,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
         NotificationCenter.default.post(name: Notification.Name("connectionCreatedSuccessfully"), object: nil , userInfo: nil)
         self.fetchSendingMsgsAndResend()
     }
-    func channel(_ channel: RMQChannel!, error: Error!) {
+    public func channel(_ channel: RMQChannel!, error: Error!) {
         print("\(error)")
     }
     
@@ -2364,9 +2365,7 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
             if code == "11"
             {
                 let url = response["message"] as! String
-                
                 self.fetchMsgObjFromLocalArray(tag: tag, url: url)
-                
             }
             else
             {
@@ -2379,4 +2378,5 @@ class ChatDBManager: NSObject, RMQConnectionDelegate
         // Removing the Observer
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue:"SpecialCallForImageUpload"), object: nil)
     }
+    
 }

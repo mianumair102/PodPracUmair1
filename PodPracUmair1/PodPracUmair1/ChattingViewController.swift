@@ -1,14 +1,14 @@
     //
-//  ChattingViewController.swift
-//  EventsApp
-//
-//  Created by Janbaz Ali on 7/10/17.
-//  Copyright © 2017 Janbaz Ali. All rights reserved.
-//
-
-import UIKit
-import RMQClient
-import CoreData
+    //  ChattingViewController.swift
+    //  EventsApp
+    //
+    //  Created by Janbaz Ali on 7/10/17.
+    //  Copyright © 2017 Janbaz Ali. All rights reserved.
+    //
+    
+    import UIKit
+    import RMQClient
+    import CoreData
     extension NSCalendar {
         func daysWithinEraFromDate(startDate: NSDate, toDate endDate: NSDate) -> NSInteger {
             let startDay = self.ordinality(of: .day, in: .era, for: startDate as Date)
@@ -18,48 +18,48 @@ import CoreData
     }
     
     
-class ChatMessageTableCell: UITableViewCell
-{
-    @IBOutlet var lblmessage: UILabel!
-    @IBOutlet weak var imgPointer: UIImageView!
-    @IBOutlet weak var imgUser: RozeeUIButton!
-    @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var lblTopDate: UILabel!
-    
-}
-class MyMessageTableCell: UITableViewCell
-{
-    @IBOutlet var lblmessage: UILabel!
-    @IBOutlet weak var imgStatus: UIImageView!
-    @IBOutlet weak var imgPointer: UIImageView!
-    @IBOutlet weak var btnRetry: UIButton!
-    @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var lblTopDate: UILabel!
-    
+    class ChatMessageTableCell: UITableViewCell
+    {
+        @IBOutlet var lblmessage: UILabel!
+        @IBOutlet weak var imgPointer: UIImageView!
+        @IBOutlet weak var imgUser: RozeeUIButton!
+        @IBOutlet weak var lblDate: UILabel!
+        @IBOutlet weak var lblTopDate: UILabel!
         
-}
-class MyImageTableCell: UITableViewCell
-{
-    @IBOutlet weak var imgPhoto: RozeeUIImageView!
-    @IBOutlet weak var imgPointer: UIImageView!
-    @IBOutlet weak var imgStatus: UIImageView!
-    @IBOutlet weak var btnRetry: UIButton!
-    @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var lblTopDate: UILabel!
-
-}
-class SenderImageTableCell: UITableViewCell
-{
-    @IBOutlet weak var imgPhoto: RozeeUIImageView!
-    @IBOutlet weak var imgPointer: UIImageView!
-    @IBOutlet weak var imgUser: RozeeUIButton!
-    @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var lblTopDate: UILabel!
-    @IBOutlet weak var btnFullImg: UIButton!
-}
+    }
+    class MyMessageTableCell: UITableViewCell
+    {
+        @IBOutlet var lblmessage: UILabel!
+        @IBOutlet weak var imgStatus: UIImageView!
+        @IBOutlet weak var imgPointer: UIImageView!
+        @IBOutlet weak var btnRetry: UIButton!
+        @IBOutlet weak var lblDate: UILabel!
+        @IBOutlet weak var lblTopDate: UILabel!
+        
+        
+    }
+    class MyImageTableCell: UITableViewCell
+    {
+        @IBOutlet weak var imgPhoto: RozeeUIImageView!
+        @IBOutlet weak var imgPointer: UIImageView!
+        @IBOutlet weak var imgStatus: UIImageView!
+        @IBOutlet weak var btnRetry: UIButton!
+        @IBOutlet weak var lblDate: UILabel!
+        @IBOutlet weak var lblTopDate: UILabel!
+        
+    }
+    class SenderImageTableCell: UITableViewCell
+    {
+        @IBOutlet weak var imgPhoto: RozeeUIImageView!
+        @IBOutlet weak var imgPointer: UIImageView!
+        @IBOutlet weak var imgUser: RozeeUIButton!
+        @IBOutlet weak var lblDate: UILabel!
+        @IBOutlet weak var lblTopDate: UILabel!
+        @IBOutlet weak var btnFullImg: UIButton!
+    }
     
     
-class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate,NSFetchedResultsControllerDelegate
+    class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate,NSFetchedResultsControllerDelegate
 {
     @IBOutlet weak var imgUserTop: RozeeUIButton!
     @IBOutlet var tblChat: UITableView!
@@ -108,7 +108,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
    // private let persistentContainer = NSPersistentContainer(name: "ChatDBModel")
     
     
-    override func viewDidLoad()
+    override  func viewDidLoad()
     {
         super.viewDidLoad()
         self.constHeightLblConnectionStatus.constant = 0
@@ -117,7 +117,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         
         isPartnerTying = "N"
          point = CGPoint.init(x: 0, y: 0)
-         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg2.jpg")!)
+         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg2.jpg", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)!)
         if self.recieverImage == nil
         {
             self.recieverImage = ""
@@ -137,8 +137,8 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
      //   connection.start()
         
         self.arrayChat = NSMutableArray()
-        
-        let storyboard = UIStoryboard(name: "Chatting", bundle: nil)
+        let bundle = Bundle(for: ChattingViewController.self)
+        let storyboard = UIStoryboard(name: "Chatting", bundle: bundle)
         activityVC  = storyboard.instantiateViewController(withIdentifier: "ActivityViewController") as! ActivityViewController
         tapGesture.addTarget(self, action: #selector(tapBlurButton))
         tapGesture.numberOfTapsRequired = 1
@@ -178,7 +178,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         
         self.addNotificationsForConnection()
     }
-    override func viewDidAppear(_ animated: Bool)
+    override  func viewDidAppear(_ animated: Bool)
     {
         super.viewWillAppear(true)
         if self.checkIdUserBlocked()
@@ -186,22 +186,29 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         }
         else
         {
-            timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getUserStatus), userInfo: nil, repeats: true)
+            if self.exchangename == nil || self.queueForChat == nil || (self.exchangename?.isEmpty)! || (self.queueForChat?.isEmpty)!
+            {
+                
+            }
+            else
+            {
+                timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getUserStatus), userInfo: nil, repeats: true)
+            }
         }
         
     }
-    override func viewDidDisappear(_ animated: Bool) {
+    override  func viewDidDisappear(_ animated: Bool) {
         timer.invalidate()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override   func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
        // txtfield.resignFirstResponder()
     }
     
    
 
-    override func didReceiveMemoryWarning() {
+    override  func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -218,18 +225,18 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
 //
 //    func addToolBar()
 //    {
-//        
-//        
+//
+//
 //        //Fixed space
 //        let fixed = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.fixedSpace, target: self, action: nil)
 //        fixed.width = 10
-//        
+//
 //        //Text
 //        let text = UIBarButtonItem(title: "My Title", style: UIBarButtonItemStyle.plain, target: self, action: nil)
 //        text.setTitleTextAttributes([
 //            NSFontAttributeName : UIFont.systemFont(ofSize: 23.0),
 //            NSForegroundColorAttributeName : UIColor.white], for: UIControlState.normal)
-//        
+//
 //        //TextField
 //        let  textField = UITextField(frame:CGRect(x: 0, y: 0, width: 150, height: 30))
 //        textField.delegate = self
@@ -243,11 +250,11 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
 //        textField.layer.addSublayer(border)
 //        textField.layer.masksToBounds = true
 //        let textFieldButton = UIBarButtonItem(customView: textField)
-//        
+//
 //        //Search Button
 //        let search = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: nil)
-//        
-//        
+//
+//
 //        //Toolbar
 //        let toolbar = UIToolbar(frame: CGRect(x: 0, y: view.frame.height-50, width: view.frame.width, height: 50))
 //        toolbar.sizeToFit()
@@ -345,7 +352,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override  func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         if let changeDict = change, let view = self.txtfield {
             if object as? NSObject == self.txtfield && keyPath == "contentSize" {
@@ -567,7 +574,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             var dic = Constants.jsonStandard()
             dic["type"] = "getInfo" as AnyObject
             dic["subtype"] = "user_status" as AnyObject
-            dic["exchange"] = exchangename as AnyObject
+            dic["exchange"] = self.exchangename as AnyObject
             dic["userId"] = UserDefaults.standard.value(forKey: Constants.kChatUserId) as AnyObject
 
             do {
@@ -646,8 +653,8 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             
             
             let url = URL(string: self.recieverImage)
-            let  image = UIImage(named : "user_profile_bg.png")
-            
+           // let  image = UIImage(named : "user_profile_bg.png")
+            let  image = UIImage(named: "user_profile_bg.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
             imgUserTop.sd_setBackgroundImage(with: url, for: UIControlState.normal, placeholderImage: image)
             
             
@@ -744,7 +751,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             print("JSON serialization failed:  \(error)")
             
         }
-  ChatDBManager.ChatDBManagerSharedInstance.sendMessageToExchange(exchangeName: self.exchangename, queue: queueForChat!, message: msg)
+        ChatDBManager.ChatDBManagerSharedInstance.sendMessageToExchange(exchangeName: self.exchangename, queue: queueForChat!, message: msg)
         
         
     }
@@ -753,7 +760,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
     
     //MARK:- Textfiled Delegate
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool
+     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool
     {
         if (!text.isEmpty)
         {
@@ -1085,7 +1092,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        return 200;
 //    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if self.exchangename == nil || self.queueForChat == nil || (self.exchangename?.isEmpty)! || (self.queueForChat?.isEmpty)!{
             return 0
@@ -1095,7 +1102,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         //return self.arrayChat.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         var showTopDate = true
         let msgObjFetchReq = fetchedResultsController.object(at: indexPath)
@@ -1199,6 +1206,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
                 else
                 {
                     // image = UIImage(named : "bg2.jpg")
+                   // image = UIImage(named: "bg2.jpg", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                     cell.imgPhoto.sd_setShowActivityIndicatorView(true)
                     cell.imgPhoto.sd_setIndicatorStyle(.gray)
                     cell.imgPhoto.sd_setImage(with: url, completed: { (responseImage, error, nil, url) in
@@ -1279,28 +1287,33 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
                 cell.lblDate.text = localDate
                 cell.btnRetry.tag = indexPath.row
                 if msgObj.status == "sent" {
-                    let img = UIImage(named: "sent.png")
+                   // let img = UIImage(named: "sent.png")
+                    let img = UIImage(named: "sent.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                     cell.imgStatus.image = img
                     // cell.btnRetry.isHidden = true
                 }
                 else if msgObj.status == "failed" {
                    // cell.btnRetry.isHidden = false
-                    let img = UIImage(named: "failed.png")
+                    //let img = UIImage(named: "failed.png")
+                    let img = UIImage(named: "failed.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                     cell.imgStatus.image = img
                 }
                 else if msgObj.status == "delivered" {
-                    let img = UIImage(named: "Delivered.png")
+                    //let img = UIImage(named: "Delivered.png")
+                    let img = UIImage(named: "Delivered.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                     cell.imgStatus.image = img
                     //cell.btnRetry.isHidden = true
                 }
                 else if msgObj.status == "read" {
-                    let img = UIImage(named: "read.png")
+                   // let img = UIImage(named: "read.png")
+                    let img = UIImage(named: "read.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                     cell.imgStatus.image = img
                     //cell.btnRetry.isHidden = true
                 }
                 else
                 {
-                    let img = UIImage(named: "sending.png")
+                    //let img = UIImage(named: "sending.png")
+                    let img = UIImage(named: "sending.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                     cell.imgStatus.image = img
                     //cell.btnRetry.isHidden = true
                 }
@@ -1324,28 +1337,33 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             }
             
             if msgObj.status == "sent" {
-                let img = UIImage(named: "sent.png")
+                //let img = UIImage(named: "sent.png")
+                let img = UIImage(named: "sent.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                 cell.imgStatus.image = img
                 cell.btnRetry.isHidden = true
             }
             else if msgObj.status == "failed" {
                 cell.btnRetry.isHidden = false
-                let img = UIImage(named: "failed.png")
+                //let img = UIImage(named: "failed.png")
+                let img = UIImage(named: "failed.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                 cell.imgStatus.image = img
             }
             else if msgObj.status == "delivered" {
-                let img = UIImage(named: "Delivered.png")
+                //let img = UIImage(named: "Delivered.png")
+                let img = UIImage(named: "Delivered.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                 cell.imgStatus.image = img
                 cell.btnRetry.isHidden = true
             }
             else if msgObj.status == "read" {
-                let img = UIImage(named: "read.png")
+                //let img = UIImage(named: "read.png")
+                let img = UIImage(named: "read.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                 cell.imgStatus.image = img
                 cell.btnRetry.isHidden = true
             }
             else
             {
-                let img = UIImage(named: "sending.png")
+                //let img = UIImage(named: "sending.png")
+                let img = UIImage(named: "sending.png", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)
                 cell.imgStatus.image = img
                 cell.btnRetry.isHidden = true
             }
@@ -1415,7 +1433,8 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             }
             else
             {
-                image = UIImage(named : "bg2.jpg")!
+               // image = UIImage(named : "bg2.jpg")!
+                image = UIImage(named: "bg2.jpg", in: Bundle(for: ChattingViewController.self), compatibleWith: nil)!
 //                cell.imgPhoto.sd_setShowActivityIndicatorView(true)
 //                cell.imgPhoto.sd_setIndicatorStyle(.gray)
 //                cell.imgPhoto.sd_setHighlightedImage(with: url, options: [.highPriority], completed: { (responseImage, error, nil, url) in
@@ -1534,7 +1553,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
         tableView.deselectRow(at: indexPath, animated: false)
@@ -1756,7 +1775,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             if code == "11"
             {
                 exchangename = response["exchange"] as? String
-                queueForChat = response["queue"] as? String 
+                queueForChat = response["queue"] as? String
                 self.subscribeToExchangeWithName(exchangeName: exchangename!, queue: queueForChat!)
                 
                 // Add Thread To DB
@@ -1794,6 +1813,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
               //  self.fetchMessagesFromDB(exchange: exchangename)
                 // new
                 self.setUpFetchRequestCoreData()
+                timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getUserStatus), userInfo: nil, repeats: true)
             }
             else
             {
@@ -1983,12 +2003,12 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         }
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+      func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
     {
         
         
@@ -2096,15 +2116,15 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
     
     //MARK:- NsFetchResultControllerDelegate
     
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
        // tblChat.beginUpdates()
     }
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         //tblChat.endUpdates()
         
     }
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch (type) {
         case .insert:
             if let indexPath = newIndexPath {
@@ -2152,7 +2172,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
         }
     }
     
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         
     }
     
@@ -2174,19 +2194,19 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
 }
     
     extension String {
-        func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
-            let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-            let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
-            
-            return ceil(boundingBox.height)
-        }
-        
-        func width(withConstraintedHeight height: CGFloat, font: UIFont) -> CGFloat {
-            let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-            let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
-            
-            return ceil(boundingBox.width)
-        }
+//        func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+//            let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+//            let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+//
+//            return ceil(boundingBox.height)
+//        }
+//
+//        func width(withConstraintedHeight height: CGFloat, font: UIFont) -> CGFloat {
+//            let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+//            let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+//
+//            return ceil(boundingBox.width)
+//        }
     }
     
 //    extension UIImage {
@@ -2197,12 +2217,12 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
 //            case high    = 0.75
 //            case highest = 1
 //        }
-//        
+//
 //        /// Returns the data for the specified image in PNG format
 //        /// If the image object’s underlying image data has been purged, calling this function forces that data to be reloaded into memory.
 //        /// - returns: A data object containing the PNG data, or nil if there was a problem generating the data. This function may return nil if the image has no data or if the underlying CGImageRef contains data in an unsupported bitmap format.
 //        var png: Data? { return UIImagePNGRepresentation(self) }
-//        
+//
 //        /// Returns the data for the specified image in JPEG format.
 //        /// If the image object’s underlying image data has been purged, calling this function forces that data to be reloaded into memory.
 //        /// - returns: A data object containing the JPEG data, or nil if there was a problem generating the data. This function may return nil if the image has no data or if the underlying CGImageRef contains data in an unsupported bitmap format.
@@ -2232,7 +2252,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             return UIImageJPEGRepresentation(self, quality.rawValue)
         }
         
-        public func resize(width: CGFloat) -> UIImage? {
+         func resize(width: CGFloat) -> UIImage? {
             let scale = width / self.size.width
             let height = self.size.height * scale
             UIGraphicsBeginImageContext(CGSize(width: width, height: height))
@@ -2243,7 +2263,7 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
             //resultImage = blurImage(resultImage: resultImage!)
             return resultImage
         }
-        public func blurImage(resultImage: UIImage) -> UIImage? {
+         func blurImage(resultImage: UIImage) -> UIImage? {
             
             let inputImage = CIImage(image: resultImage)
             
@@ -2284,3 +2304,4 @@ class ChattingViewController: UIViewController,UITextFieldDelegate, UITableViewD
     
     
     
+

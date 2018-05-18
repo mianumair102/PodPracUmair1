@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PodPracUmair1"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "It is the short Summary of Pod project one"
   s.description  = "It is the short description of Pod project one. I am practicing on it so that when Janbaz will come I will work wih him to fix his issue."
 
@@ -13,18 +13,21 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "10.0"
 
-  s.source       = { :git => "https://github.com/mianumair102/PodPracUmair1.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/mianumair102/PodPracUmair1.git", :tag => "1.0.2" }
 
   s.source_files  = "PodPracUmair1/**/*.{h,m,swift}"
 
-
   s.source_files  = 'PodPracUmair1/PodPracUmair1', 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld', 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld/*.xcdatamodel'
-  s.resources = [ 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld', 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld/*.xcdatamodel']
+
+  s.resources = [ 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld', 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld/*.xcdatamodel','PodPracUmair1/PodPracUmair1/*.storyboard','PodPracUmair1/PodPracUmair1/*.png','PodPracUmair1/PodPracUmair1/*.jpg']
+
   s.preserve_paths = 'PodPracUmair1/PodPracUmair1/ChatDBModel.xcdatamodeld'
+
+
   s.framework  = 'CoreData'
   s.requires_arc = true
 
-  s.resources = ["PodPracUmair1/PodPracUmair1/Resources/*.png"]
+#s.resources = ["PodPracUmair1/PodPracUmair1/Resources/*.png"]
 
 s.dependency "SwiftHEXColors"
 s.dependency "Alamofire", "~> 4.0"

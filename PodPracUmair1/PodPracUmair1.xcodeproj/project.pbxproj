@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E7578D8209B148200BCD968 /* PodPracUmair1.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7578D6209B148200BCD968 /* PodPracUmair1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E7578DF209B162500BCD968 /* StudentObjectUmair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */; };
-		3E8948D720A166D500C5EE69 /* TempSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E8948D520A166D500C5EE69 /* TempSample.xcdatamodeld */; };
 		3EAD3E1820A0704E00FDBE1A /* temp.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EAD3E1720A0704E00FDBE1A /* temp.png */; };
-		3EAD3E1B20A07A7B00FDBE1A /* SampleTempUmair.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3EAD3E1920A0790600FDBE1A /* SampleTempUmair.xcdatamodel */; };
 		3EFBB2D220A4105C00B4A5A4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFBB2D120A4105C00B4A5A4 /* CoreData.framework */; };
 		3EFBB2DA20A41BA400B4A5A4 /* RozeeUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB2D620A41BA400B4A5A4 /* RozeeUIImageView.swift */; };
 		3EFBB2DB20A41BA400B4A5A4 /* FrameWorkStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB2D720A41BA400B4A5A4 /* FrameWorkStarter.swift */; };
@@ -50,8 +48,19 @@
 		3EFBB32220A41C3800B4A5A4 /* ChatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB31C20A41C3800B4A5A4 /* ChatSDK.swift */; };
 		3EFBB32320A41C3800B4A5A4 /* SingletonClassOfObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB31D20A41C3800B4A5A4 /* SingletonClassOfObjects.swift */; };
 		3EFBB32620A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB32420A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld */; };
-		3EFBB32820A4217300B4A5A4 /* StartChatSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBB32720A4217300B4A5A4 /* StartChatSDK.swift */; };
 		957090BA9E442541D74DDB14 /* Pods_PodPracUmair1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */; };
+		DF1B8C3B20A57D3400FC4A94 /* ChatSDKProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B8C3A20A57D3400FC4A94 /* ChatSDKProtocols.swift */; };
+		DF1B8C3D20A5861000FC4A94 /* ChatSdkStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B8C3C20A5861000FC4A94 /* ChatSdkStart.swift */; };
+		DF1B8C3F20A5A82A00FC4A94 /* TestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B8C3E20A5A82A00FC4A94 /* TestsViewController.swift */; };
+		DF1B8C4120A5B71C00FC4A94 /* UffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1B8C4020A5B71C00FC4A94 /* UffViewController.swift */; };
+		DF1B8C4320A5CB2000FC4A94 /* Testing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1B8C4220A5CB2000FC4A94 /* Testing.storyboard */; };
+		DF214CA420AB07B5002679BA /* DModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF214CA220AB07B5002679BA /* DModel.xcdatamodeld */; };
+		DFE52E3C20A99F1C002C8C26 /* Members+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE52E3620A99F1B002C8C26 /* Members+CoreDataClass.swift */; };
+		DFE52E3D20A99F1C002C8C26 /* Members+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE52E3720A99F1B002C8C26 /* Members+CoreDataProperties.swift */; };
+		DFE52E3E20A99F1C002C8C26 /* ChatHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE52E3820A99F1B002C8C26 /* ChatHistory+CoreDataClass.swift */; };
+		DFE52E3F20A99F1C002C8C26 /* ChatHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE52E3920A99F1C002C8C26 /* ChatHistory+CoreDataProperties.swift */; };
+		DFE52E4020A99F1C002C8C26 /* ChatThreads+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE52E3A20A99F1C002C8C26 /* ChatThreads+CoreDataProperties.swift */; };
+		DFE52E4120A99F1C002C8C26 /* ChatThreads+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE52E3B20A99F1C002C8C26 /* ChatThreads+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,9 +68,7 @@
 		3E7578D6209B148200BCD968 /* PodPracUmair1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PodPracUmair1.h; sourceTree = "<group>"; };
 		3E7578D7209B148200BCD968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentObjectUmair.swift; sourceTree = "<group>"; };
-		3E8948D620A166D500C5EE69 /* TempSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TempSample.xcdatamodel; sourceTree = "<group>"; };
 		3EAD3E1720A0704E00FDBE1A /* temp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temp.png; sourceTree = "<group>"; };
-		3EAD3E1920A0790600FDBE1A /* SampleTempUmair.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleTempUmair.xcdatamodel; sourceTree = "<group>"; };
 		3EFBB2D120A4105C00B4A5A4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3EFBB2D620A41BA400B4A5A4 /* RozeeUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RozeeUIImageView.swift; sourceTree = "<group>"; };
 		3EFBB2D720A41BA400B4A5A4 /* FrameWorkStarter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameWorkStarter.swift; sourceTree = "<group>"; };
@@ -100,9 +107,20 @@
 		3EFBB31C20A41C3800B4A5A4 /* ChatSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSDK.swift; sourceTree = "<group>"; };
 		3EFBB31D20A41C3800B4A5A4 /* SingletonClassOfObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonClassOfObjects.swift; sourceTree = "<group>"; };
 		3EFBB32520A41CC500B4A5A4 /* ChatDBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatDBModel.xcdatamodel; sourceTree = "<group>"; };
-		3EFBB32720A4217300B4A5A4 /* StartChatSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatSDK.swift; sourceTree = "<group>"; };
 		9DC68D6FC923CAE52C5CCB5D /* Pods-PodPracUmair1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F07E75D9233DF5E88A341A /* Pods_PodPracUmair1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodPracUmair1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF1B8C3A20A57D3400FC4A94 /* ChatSDKProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSDKProtocols.swift; sourceTree = "<group>"; };
+		DF1B8C3C20A5861000FC4A94 /* ChatSdkStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSdkStart.swift; sourceTree = "<group>"; };
+		DF1B8C3E20A5A82A00FC4A94 /* TestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsViewController.swift; sourceTree = "<group>"; };
+		DF1B8C4020A5B71C00FC4A94 /* UffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UffViewController.swift; sourceTree = "<group>"; };
+		DF1B8C4220A5CB2000FC4A94 /* Testing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testing.storyboard; sourceTree = "<group>"; };
+		DF214CA320AB07B5002679BA /* DModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DModel.xcdatamodel; sourceTree = "<group>"; };
+		DFE52E3620A99F1B002C8C26 /* Members+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Members+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DFE52E3720A99F1B002C8C26 /* Members+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Members+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFE52E3820A99F1B002C8C26 /* ChatHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DFE52E3920A99F1C002C8C26 /* ChatHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFE52E3A20A99F1C002C8C26 /* ChatThreads+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatThreads+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFE52E3B20A99F1C002C8C26 /* ChatThreads+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatThreads+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F5432FF9766D3DEA26940B2B /* Pods-PodPracUmair1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodPracUmair1.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodPracUmair1/Pods-PodPracUmair1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,80 +167,6 @@
 		3E7578D5209B148200BCD968 /* PodPracUmair1 */ = {
 			isa = PBXGroup;
 			children = (
-				3EFBB31720A41C3800B4A5A4 /* Shared */,
-				3EFBB2FC20A41C3200B4A5A4 /* Resources */,
-				3EFBB2F720A41C2C00B4A5A4 /* Networks */,
-				3EFBB2EC20A41C2600B4A5A4 /* Models */,
-				3EFBB2E320A41C0C00B4A5A4 /* Controllers */,
-				3EFBB2E120A41BEB00B4A5A4 /* Chatting.storyboard */,
-				3EFBB2DE20A41BC500B4A5A4 /* ChatDBManager */,
-				3EFBB2D520A41BA400B4A5A4 /* BaseClasses */,
-				3EAD3E1920A0790600FDBE1A /* SampleTempUmair.xcdatamodel */,
-				3EAD3E1720A0704E00FDBE1A /* temp.png */,
-				3E7578D6209B148200BCD968 /* PodPracUmair1.h */,
-				3E7578D7209B148200BCD968 /* Info.plist */,
-				3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */,
-				3E8948D520A166D500C5EE69 /* TempSample.xcdatamodeld */,
-				3EFBB32420A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld */,
-				3EFBB32720A4217300B4A5A4 /* StartChatSDK.swift */,
-			);
-			path = PodPracUmair1;
-			sourceTree = "<group>";
-		};
-		3EFBB2D520A41BA400B4A5A4 /* BaseClasses */ = {
-			isa = PBXGroup;
-			children = (
-				3EFBB2D620A41BA400B4A5A4 /* RozeeUIImageView.swift */,
-				3EFBB2D720A41BA400B4A5A4 /* FrameWorkStarter.swift */,
-				3EFBB2D820A41BA400B4A5A4 /* RozeeUIButton.swift */,
-				3EFBB2D920A41BA400B4A5A4 /* RozeeUIView.swift */,
-			);
-			path = BaseClasses;
-			sourceTree = "<group>";
-		};
-		3EFBB2DE20A41BC500B4A5A4 /* ChatDBManager */ = {
-			isa = PBXGroup;
-			children = (
-				3EFBB2DF20A41BCF00B4A5A4 /* ChatDBManager.swift */,
-			);
-			path = ChatDBManager;
-			sourceTree = "<group>";
-		};
-		3EFBB2E320A41C0C00B4A5A4 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3EFBB2E420A41C0C00B4A5A4 /* ChattingViewController.swift */,
-				3EFBB2E520A41C0C00B4A5A4 /* AttendeesListViewController.swift */,
-				3EFBB2E620A41C0C00B4A5A4 /* FullImageViewController.swift */,
-				3EFBB2E720A41C0C00B4A5A4 /* ChatThreadsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		3EFBB2EC20A41C2600B4A5A4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3EFBB2ED20A41C2600B4A5A4 /* ChatMemberObject.swift */,
-				3EFBB2EE20A41C2600B4A5A4 /* UserObject.swift */,
-				3EFBB2EF20A41C2600B4A5A4 /* ChatHistoryObject.swift */,
-				3EFBB2F020A41C2600B4A5A4 /* SendingChatModel.swift */,
-				3EFBB2F120A41C2600B4A5A4 /* ChatThreadModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		3EFBB2F720A41C2C00B4A5A4 /* Networks */ = {
-			isa = PBXGroup;
-			children = (
-				3EFBB2F820A41C2C00B4A5A4 /* NetworkCalls.swift */,
-				3EFBB2F920A41C2C00B4A5A4 /* NetworkResponse.swift */,
-			);
-			path = Networks;
-			sourceTree = "<group>";
-		};
-		3EFBB2FC20A41C3200B4A5A4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
 				3EFBB2FD20A41C3200B4A5A4 /* bubble_left.png */,
 				3EFBB2FE20A41C3200B4A5A4 /* plus.png */,
 				3EFBB2FF20A41C3200B4A5A4 /* emoji.png */,
@@ -236,6 +180,95 @@
 				3EFBB30720A41C3200B4A5A4 /* bg2.jpg */,
 				3EFBB30820A41C3200B4A5A4 /* sent.png */,
 				3EFBB30920A41C3200B4A5A4 /* camera.png */,
+				DFE52E3820A99F1B002C8C26 /* ChatHistory+CoreDataClass.swift */,
+				DFE52E3920A99F1C002C8C26 /* ChatHistory+CoreDataProperties.swift */,
+				DFE52E3B20A99F1C002C8C26 /* ChatThreads+CoreDataClass.swift */,
+				DFE52E3A20A99F1C002C8C26 /* ChatThreads+CoreDataProperties.swift */,
+				DFE52E3620A99F1B002C8C26 /* Members+CoreDataClass.swift */,
+				DFE52E3720A99F1B002C8C26 /* Members+CoreDataProperties.swift */,
+				3EFBB31720A41C3800B4A5A4 /* Shared */,
+				3EFBB2FC20A41C3200B4A5A4 /* Resources */,
+				3EFBB2F720A41C2C00B4A5A4 /* Networks */,
+				3EFBB2EC20A41C2600B4A5A4 /* Models */,
+				3EFBB2E320A41C0C00B4A5A4 /* Controllers */,
+				3EFBB2DE20A41BC500B4A5A4 /* ChatDBManager */,
+				3EFBB2D520A41BA400B4A5A4 /* BaseClasses */,
+				3EFBB2D620A41BA400B4A5A4 /* RozeeUIImageView.swift */,
+				3EFBB2D720A41BA400B4A5A4 /* FrameWorkStarter.swift */,
+				3EFBB2D820A41BA400B4A5A4 /* RozeeUIButton.swift */,
+				3EFBB2D920A41BA400B4A5A4 /* RozeeUIView.swift */,
+				3EFBB31B20A41C3800B4A5A4 /* ActivityViewController.swift */,
+				3EFBB31C20A41C3800B4A5A4 /* ChatSDK.swift */,
+				3EFBB31D20A41C3800B4A5A4 /* SingletonClassOfObjects.swift */,
+				3EFBB2F820A41C2C00B4A5A4 /* NetworkCalls.swift */,
+				3EFBB2F920A41C2C00B4A5A4 /* NetworkResponse.swift */,
+				3EFBB2EE20A41C2600B4A5A4 /* UserObject.swift */,
+				3EFBB2F020A41C2600B4A5A4 /* SendingChatModel.swift */,
+				3EFBB2E520A41C0C00B4A5A4 /* AttendeesListViewController.swift */,
+				3EFBB2E620A41C0C00B4A5A4 /* FullImageViewController.swift */,
+				3EFBB2E720A41C0C00B4A5A4 /* ChatThreadsViewController.swift */,
+				DF1B8C3E20A5A82A00FC4A94 /* TestsViewController.swift */,
+				3EFBB31920A41C3800B4A5A4 /* DataManager.swift */,
+				3EFBB31A20A41C3800B4A5A4 /* ApiLinks.swift */,
+				3EFBB31820A41C3800B4A5A4 /* Constants.swift */,
+				3EFBB2F120A41C2600B4A5A4 /* ChatThreadModel.swift */,
+				3EFBB2EF20A41C2600B4A5A4 /* ChatHistoryObject.swift */,
+				3EFBB2ED20A41C2600B4A5A4 /* ChatMemberObject.swift */,
+				3EFBB2DF20A41BCF00B4A5A4 /* ChatDBManager.swift */,
+				3EAD3E1720A0704E00FDBE1A /* temp.png */,
+				3E7578D6209B148200BCD968 /* PodPracUmair1.h */,
+				3E7578D7209B148200BCD968 /* Info.plist */,
+				3EFBB2E420A41C0C00B4A5A4 /* ChattingViewController.swift */,
+				3E7578DE209B162500BCD968 /* StudentObjectUmair.swift */,
+				3EFBB32420A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld */,
+				DF1B8C3A20A57D3400FC4A94 /* ChatSDKProtocols.swift */,
+				DF1B8C3C20A5861000FC4A94 /* ChatSdkStart.swift */,
+				DF1B8C4020A5B71C00FC4A94 /* UffViewController.swift */,
+				3EFBB2E120A41BEB00B4A5A4 /* Chatting.storyboard */,
+				DF1B8C4220A5CB2000FC4A94 /* Testing.storyboard */,
+				DF214CA220AB07B5002679BA /* DModel.xcdatamodeld */,
+			);
+			path = PodPracUmair1;
+			sourceTree = "<group>";
+		};
+		3EFBB2D520A41BA400B4A5A4 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		3EFBB2DE20A41BC500B4A5A4 /* ChatDBManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChatDBManager;
+			sourceTree = "<group>";
+		};
+		3EFBB2E320A41C0C00B4A5A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3EFBB2EC20A41C2600B4A5A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3EFBB2F720A41C2C00B4A5A4 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		3EFBB2FC20A41C3200B4A5A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,12 +276,6 @@
 		3EFBB31720A41C3800B4A5A4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				3EFBB31820A41C3800B4A5A4 /* Constants.swift */,
-				3EFBB31920A41C3800B4A5A4 /* DataManager.swift */,
-				3EFBB31A20A41C3800B4A5A4 /* ApiLinks.swift */,
-				3EFBB31B20A41C3800B4A5A4 /* ActivityViewController.swift */,
-				3EFBB31C20A41C3800B4A5A4 /* ChatSDK.swift */,
-				3EFBB31D20A41C3800B4A5A4 /* SingletonClassOfObjects.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -340,6 +367,7 @@
 				3EFBB31620A41C3200B4A5A4 /* camera.png in Resources */,
 				3EFBB31020A41C3200B4A5A4 /* bubble.png in Resources */,
 				3EFBB30F20A41C3200B4A5A4 /* failed.png in Resources */,
+				DF1B8C4320A5CB2000FC4A94 /* Testing.storyboard in Resources */,
 				3EFBB30E20A41C3200B4A5A4 /* sending.png in Resources */,
 				3EAD3E1820A0704E00FDBE1A /* temp.png in Resources */,
 				3EFBB30A20A41C3200B4A5A4 /* bubble_left.png in Resources */,
@@ -380,29 +408,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFBB2F420A41C2600B4A5A4 /* ChatHistoryObject.swift in Sources */,
-				3EFBB32820A4217300B4A5A4 /* StartChatSDK.swift in Sources */,
 				3EFBB2E920A41C0C00B4A5A4 /* AttendeesListViewController.swift in Sources */,
-				3E8948D720A166D500C5EE69 /* TempSample.xcdatamodeld in Sources */,
 				3EFBB32120A41C3800B4A5A4 /* ActivityViewController.swift in Sources */,
 				3EFBB2DC20A41BA400B4A5A4 /* RozeeUIButton.swift in Sources */,
 				3EFBB2EA20A41C0C00B4A5A4 /* FullImageViewController.swift in Sources */,
 				3EFBB2EB20A41C0C00B4A5A4 /* ChatThreadsViewController.swift in Sources */,
+				DFE52E3C20A99F1C002C8C26 /* Members+CoreDataClass.swift in Sources */,
 				3E7578DF209B162500BCD968 /* StudentObjectUmair.swift in Sources */,
 				3EFBB2DB20A41BA400B4A5A4 /* FrameWorkStarter.swift in Sources */,
 				3EFBB2DD20A41BA400B4A5A4 /* RozeeUIView.swift in Sources */,
 				3EFBB2DA20A41BA400B4A5A4 /* RozeeUIImageView.swift in Sources */,
+				DF1B8C3F20A5A82A00FC4A94 /* TestsViewController.swift in Sources */,
+				DF214CA420AB07B5002679BA /* DModel.xcdatamodeld in Sources */,
+				DFE52E3F20A99F1C002C8C26 /* ChatHistory+CoreDataProperties.swift in Sources */,
 				3EFBB31F20A41C3800B4A5A4 /* DataManager.swift in Sources */,
 				3EFBB2F520A41C2600B4A5A4 /* SendingChatModel.swift in Sources */,
 				3EFBB2E820A41C0C00B4A5A4 /* ChattingViewController.swift in Sources */,
+				DFE52E3E20A99F1C002C8C26 /* ChatHistory+CoreDataClass.swift in Sources */,
+				DFE52E4020A99F1C002C8C26 /* ChatThreads+CoreDataProperties.swift in Sources */,
 				3EFBB2F220A41C2600B4A5A4 /* ChatMemberObject.swift in Sources */,
+				DFE52E4120A99F1C002C8C26 /* ChatThreads+CoreDataClass.swift in Sources */,
+				DF1B8C3D20A5861000FC4A94 /* ChatSdkStart.swift in Sources */,
 				3EFBB32320A41C3800B4A5A4 /* SingletonClassOfObjects.swift in Sources */,
-				3EAD3E1B20A07A7B00FDBE1A /* SampleTempUmair.xcdatamodel in Sources */,
 				3EFBB2FA20A41C2C00B4A5A4 /* NetworkCalls.swift in Sources */,
+				DF1B8C4120A5B71C00FC4A94 /* UffViewController.swift in Sources */,
+				DFE52E3D20A99F1C002C8C26 /* Members+CoreDataProperties.swift in Sources */,
 				3EFBB31E20A41C3800B4A5A4 /* Constants.swift in Sources */,
 				3EFBB32220A41C3800B4A5A4 /* ChatSDK.swift in Sources */,
 				3EFBB2FB20A41C2C00B4A5A4 /* NetworkResponse.swift in Sources */,
 				3EFBB32020A41C3800B4A5A4 /* ApiLinks.swift in Sources */,
 				3EFBB2F620A41C2600B4A5A4 /* ChatThreadModel.swift in Sources */,
+				DF1B8C3B20A57D3400FC4A94 /* ChatSDKProtocols.swift in Sources */,
 				3EFBB2E020A41BCF00B4A5A4 /* ChatDBManager.swift in Sources */,
 				3EFBB2F320A41C2600B4A5A4 /* UserObject.swift in Sources */,
 				3EFBB32620A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld in Sources */,
@@ -535,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DC68D6FC923CAE52C5CCB5D /* Pods-PodPracUmair1.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5432FF9766D3DEA26940B2B /* Pods-PodPracUmair1.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -604,16 +642,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3E8948D520A166D500C5EE69 /* TempSample.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3E8948D620A166D500C5EE69 /* TempSample.xcdatamodel */,
-			);
-			currentVersion = 3E8948D620A166D500C5EE69 /* TempSample.xcdatamodel */;
-			path = TempSample.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		3EFBB32420A41CC500B4A5A4 /* ChatDBModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
@@ -621,6 +649,16 @@
 			);
 			currentVersion = 3EFBB32520A41CC500B4A5A4 /* ChatDBModel.xcdatamodel */;
 			path = ChatDBModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		DF214CA220AB07B5002679BA /* DModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF214CA320AB07B5002679BA /* DModel.xcdatamodel */,
+			);
+			currentVersion = DF214CA320AB07B5002679BA /* DModel.xcdatamodel */;
+			path = DModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
